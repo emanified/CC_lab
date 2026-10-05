@@ -3,99 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eman's </title> Website 🌸</title>
+
+  <title>Modern Website</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff0f6;
-      color: #5c4050;
-      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f8f6;
+      color: #222;
+      line-height: 1.6;
     }
 
-    header {
-      background: #ffb6d9;
-      padding: 30px;
-      border-radius: 0 0 30px 30px;
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      background: #ffffff;
+      border-bottom: 1px solid #e8e8e8;
     }
 
-    h1 {
-      margin: 0;
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #111;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background: #f8f8f6;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      font-size: 19px;
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      background: #222;
       color: white;
-      font-size: 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: 0.2s;
     }
 
-    .subtitle {
-      color: white;
-      font-size: 18px;
+    .button:hover {
+      background: #444;
+      transform: translateY(-2px);
+    }
+
+    /* About */
+    .section {
+      padding: 90px 8%;
+      background: white;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .section p {
+      max-width: 650px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 45px;
     }
 
     .card {
-      background: white;
-      width: 80%;
-      max-width: 500px;
-      margin: 40px auto;
       padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 8px 20px rgba(255, 150, 190, 0.25);
+      background: #f8f8f6;
+      border: 1px solid #e9e9e9;
+      border-radius: 10px;
+      transition: 0.2s;
     }
 
-    .heart {
-      font-size: 50px;
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ccc;
     }
 
-    button {
-      background: #ff8fc7;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-size: 16px;
-      cursor: pointer;
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
-    button:hover {
-      background: #ff70b5;
+    .card p {
+      font-size: 15px;
     }
 
+    /* Footer */
     footer {
-      margin-top: 50px;
-      padding: 20px;
-      color: #a56b88;
+      padding: 30px 8%;
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      nav {
+        padding: 20px;
+      }
+
+      nav ul {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>♡ Hello! ♡</h1>
-    <p class="subtitle">Welcome to my cute little website 🌸</p>
-  </header>
+  <nav>
+    <div class="logo">YOUR NAME</div>
 
-  <div class="card">
-    <div class="heart">💗</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <h2>About Me</h2>
+  <main>
 
-    <p>
-      Hi! I'm learning HTML and making cute websites ✨
-    </p>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Simple ideas.<br>Thoughtfully designed.</h1>
 
-    <button onclick="sayHello()">Click Me 🌷</button>
-  </div>
+        <p>
+          A clean and modern space to showcase your work,
+          ideas, projects, or personal brand.
+        </p>
+
+        <a href="#work" class="button">View My Work</a>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+
+      <p>
+        Welcome to my website. I focus on creating meaningful,
+        simple, and effective digital experiences.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>What I Do</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Design</h3>
+          <p>
+            Clean and thoughtful visual design focused on
+            clarity and usability.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Development</h3>
+          <p>
+            Responsive websites built with modern,
+            efficient code.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Creative Work</h3>
+          <p>
+            Ideas transformed into polished digital
+            experiences.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Let's Work Together</h2>
+
+      <p>
+        Have a project or idea in mind? I'd love to hear about it.
+      </p>
+
+      <br>
+
+      <a href="mailto:hello@example.com" class="button">
+        Get in Touch
+      </a>
+    </section>
+
+  </main>
 
   <footer>
-    Made with ♡ and a little bit of magic ✨
+    © 2026 Your Name. All rights reserved.
   </footer>
-
-  <script>
-    function sayHello() {
-      alert("Hello cutie! 🌸💗");
-    }
-  </script>
 
 </body>
 </html>
-
